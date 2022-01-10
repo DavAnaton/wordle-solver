@@ -15,7 +15,7 @@ export class LetterUsageSolver extends AbstractSolver{
 			let score = this.getWordScore(word);
 			if (score > maxScore) maxScore = score;
 			return { word, score };
-		}).filter(({ score }) => score === maxScore)).word;
+		}).filter(({ score }) => maxScore - score < 10)).word;
 	}
 }
 

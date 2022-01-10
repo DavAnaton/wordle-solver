@@ -1,7 +1,7 @@
-import FakeWordIOChannel from './io-channels/FakeWordIOChannel';
+import UserIOChannel from './io-channels/UserIOChannel';
 import LetterUsageSolver from './solvers/LetterUsageSolver';
 
-const io = new FakeWordIOChannel();
+const io = new UserIOChannel();
 const solver = new LetterUsageSolver();
 do {
 	const word = solver.getWord();
